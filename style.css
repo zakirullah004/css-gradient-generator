@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
+    font-family: "SUSE Mono", sans-serif;
     min-height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(130deg,#ff9911,#1199ff);
+    background: linear-gradient(to right,#9785af,#22db60);
 }
 
 .wrapper{
@@ -25,11 +27,12 @@ body{
     border-radius:13px;
 }
 #btn1{
-    background-color:#9f22ff;
+    background-color:#1a1a1a;
+    color: white;
 }
 #btn2{
     background-color:#16ce16;
-    color:white;
+    color:black;
 }
 .copyCode{
     border-left:5px solid silver;
@@ -42,3 +45,4 @@ body{
 .copyCode:hover{
     cursor:copy;
 }
+
