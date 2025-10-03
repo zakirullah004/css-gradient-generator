@@ -8,7 +8,6 @@ let currDeg = `0`;
 let hex1 = "#9785af";
 let hex2 = "#22db60";
 
-
 let generateCode = () => {
     let hexColors = "0123456789abcdef";
     let newColor = "#";
@@ -44,13 +43,17 @@ let index = 0;
 let changeDegree = () =>{
     let degrees = ['30', '90', '140', '180', '200', '250', '270', '300'];
     currDeg = degrees[index];
-    deg.innerText = degrees[index]
+    deg.innerText = `${degrees[index]} deg`
     index++;
     code.innerText = `linear-gradient(${currDeg}deg,${hex1},${hex2})`
     body.style.background = `linear-gradient(${currDeg}deg,${hex1},${hex2})`
-
-    if(index == degrees.length){
+    
+    if(index == degrees.length+1){
+        currDeg = `0`
+        deg.innerText = `${currDeg} deg`
         index = 0;
+        code.innerText = `linear-gradient(${currDeg}deg,${hex1},${hex2})`
+        body.style.background = `linear-gradient(${currDeg}deg,${hex1},${hex2})`
     }
 }
 
